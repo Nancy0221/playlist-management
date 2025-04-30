@@ -1,4 +1,5 @@
 # reaction-timer
+An application that calculates reaction times
 
 ## Project setup
 ```
