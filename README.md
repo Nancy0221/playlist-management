@@ -1,4 +1,4 @@
-# reaction-timer
+# playlist-management
 
 ## Project setup
 ```
