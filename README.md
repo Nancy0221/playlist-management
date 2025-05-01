@@ -1,4 +1,4 @@
-# playlist-management
+# project-planner
 
 ## Project setup
 ```
