@@ -4,10 +4,10 @@
     <div v-if="projects.length">
       <div v-for="project in filteredProjects" :key="project.id">
         <SingleProject
-            :project="project"
-            @delete="handleDelete"
-            @complete="handleComplete"
-          />
+          :project="project"
+          @delete="handleDelete"
+          @complete="handleComplete"
+        />
       </div>
     </div>
   </div>
@@ -48,14 +48,14 @@ export default {
   },
   computed: {
     filteredProjects() {
-      if (this.current === 'completed') {
-        return this.projects.filter(project => project.complete)
+      if (this.current === "completed") {
+        return this.projects.filter((project) => project.complete);
       }
-      if (this.current === 'ongoing') {
-        return this.projects.filter(project => !project.complete)
+      if (this.current === "ongoing") {
+        return this.projects.filter((project) => !project.complete);
       }
-      return this.projects
-    }
-  }
+      return this.projects;
+    },
+  },
 };
 </script>
