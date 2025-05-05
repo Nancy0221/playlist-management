@@ -3,7 +3,9 @@
     <div class="actions">
       <h3 @click="showDetails">{{ project.title }}</h3>
       <div class="icons">
-        <span class="material-icons">edit</span>
+        <router-link :to="{ name: 'EditProject', params: { id: project.id } }">
+          <span class="material-icons">edit</span>
+        </router-link>
         <span @click="deleteProject" class="material-icons">delete</span>
         <span @click="toggleComplete" class="material-icons tick">done</span>
       </div>
@@ -28,18 +30,20 @@ export default {
       this.showDetail = !this.showDetail;
     },
     deleteProject() {
-      fetch(this.url, { method: 'DELETE' })
-        .then(() => this.$emit('delete', this.project.id))
+      fetch(this.url, { method: "DELETE" })
+        .then(() => this.$emit("delete", this.project.id))
         .catch((err) => console.log(err));
     },
     toggleComplete() {
       fetch(this.url, {
-        method: 'PATCH',
-        headers: { 'Content-Type': 'application/json' },
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ complete: !this.project.complete }),
-      }).then(() => {
-        this.$emit('complete', this.project.id)
-      }).catch((err) => console.log(err));
+      })
+        .then(() => {
+          this.$emit("complete", this.project.id);
+        })
+        .catch((err) => console.log(err));
     },
   },
 };
@@ -72,10 +76,10 @@ h3 {
   color: #777;
 }
 /* completed projects */
-  .project.complete {
-    border-left: 4px solid #00ce89;
-  }
-  .project.complete .tick {
-    color: #00ce89;
-  }
+.project.complete {
+  border-left: 4px solid #00ce89;
+}
+.project.complete .tick {
+  color: #00ce89;
+}
 </style>
