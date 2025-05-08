@@ -23,4 +23,4 @@ pnpm-debug.log*
 *.sw?
 
 # Ignore all config.js files
-**/config.js
+/firebase/firebaseConfig.js
