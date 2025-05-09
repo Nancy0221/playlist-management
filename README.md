@@ -1,4 +1,4 @@
-# muso-ninjas
+# playlist-management
 
 ## Project setup
 ```
