@@ -29,7 +29,7 @@ export default {
       }
     };
 
-    return { email, password, displayName, isPending, handleSubmit };
+    return { email, password, displayName, isPending, error, handleSubmit };
   },
 };
 </script>
