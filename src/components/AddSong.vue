@@ -19,7 +19,7 @@ export default {
   setup(props) {
     const title = ref("");
     const artist = ref("");
-    const showForm = ref("false");
+    const showForm = ref(false);
     const { updateDoc } = useDocument("playlists", props.playlist.id);
 
     const handleSubmit = async () => {
