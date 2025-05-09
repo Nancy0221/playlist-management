@@ -17,6 +17,6 @@ export default {
 .content {
   margin: 0 auto;
   max-width: 1200px;
-  padding: 0;
+  padding: 0 20px;
 }
 </style>
